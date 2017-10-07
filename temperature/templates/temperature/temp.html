@@ -1,0 +1,108 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'temperature/style1.css' %}"/>
+
+<html>
+<head>
+<title>project</title>
+
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="/css/main-style.css" rel="stylesheet" type="text/css" />
+<link href="/css/mobile-tablet-style.css" rel="stylesheet"
+media="only screen and (min-width: 0px) and (max-width: 999px)" />
+
+
+<style>
+   
+</style>
+
+</head>
+
+<body bgcolor=>
+
+<div style="position:fixed;width:100%;z-index:1;top:0;">
+<div>   
+
+
+<!--<header class="css-display-container css-content css-wide";style="max-width:100%">
+-->
+ <ul class="shivani css-wide" style="width:100%;padding-top:10px;padding-bottom:10px;box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 20px 10px 0 rgba(0,0,0,0.12);margin-bottom:100px">
+ <li class="navigationspace">
+ <blockquote> <blockquote> <blockquote> <blockquote> <blockquote>  <blockquote> <a href="index.html">&emsp;&emsp;&emsp;&emsp;Home&emsp;&emsp;&emsp;&emsp;</a>
+   <a href="micro.html">Microclimate&emsp;&emsp;</a>
+  <a href="temp.html">Macroclimate</a>
+ 
+  <!--<a href="#5">Humidity&emsp;</a>
+  <a href="#6">#####&emsp;</a> -->
+   </blockquote> </blockquote> </blockquote> </blockquote> </blockquote>  </blockquote> </blockquote> </blockquote> </blockquote>
+  </li>
+</ul>
+   
+</div>
+</div>
+<!-- HTML -->
+
+
+   <html>
+<head>  
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "TEMPERATURE & HUMIDITY READINGS"
+        
+      
+      }, 
+      axisY: {
+			
+			interval: 10,
+           
+		},
+		axisX: {
+			
+			valueFormatString: "MMM-YY",
+			labelAngle: 180
+		},
+		
+        
+      data: [{        
+        type: "column",
+        showInLegend: true,
+        legendText: "Temperature in Celsius",
+        dataPoints: [
+        { x: new Date(2017,9,7), y: {{tem}} },
+       
+        ]
+      },
+      {        
+        type: "column",
+        showInLegend: true,
+        yValueFormatString: "#0.## °C",
+        legendText: "Humidity value",
+        dataPoints: [
+        { x: new Date(2017,9,7), y: {{hum}} },
+       
+        ]
+      }        
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+<br><br><br><br><br><br><br><br><br><br><br>
+ <center> <div id="chartContainer" style="height: 550px; width: 30%;">
+  </div>
+<br><br><h1>Temperature is:{{tem}}<br>Humidity is:{{hum}}</h1>
+</body>
+</html>
+
+
+

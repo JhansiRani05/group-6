@@ -1,0 +1,73 @@
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'temperature/style.css' %}"/>
+
+
+
+<html>
+<head>
+<title>project</title>
+
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="/css/main-style.css" rel="stylesheet" type="text/css" />
+<link href="/css/mobile-tablet-style.css" rel="stylesheet"
+media="only screen and (min-width: 0px) and (max-width: 999px)" />
+</head>
+
+<body bgcolor=>
+
+<div style="position:fixed;width:100%;z-index:1;top:0;">
+<div>   
+
+
+<!--<header class="css-display-container css-content css-wide";style="max-width:100%">
+-->
+ <ul class="shivani css-wide" style="width:100%;padding-top:10px;padding-bottom:10px;box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 20px 10px 0 rgba(0,0,0,0.12);margin-bottom:100px">
+ <li class="navigationspace">
+ <blockquote> <blockquote> <blockquote> <blockquote> <blockquote>  <blockquote> <a href="index.html">&emsp;&emsp;&emsp;&emsp;Home&emsp;&emsp;&emsp;&emsp;</a>
+   <a href="micro.html">Microclimate&emsp;&emsp;</a>
+  <a href="temp.html">Macroclimate</a>
+ <!-- <a href="#4">Temperature&emsp;</a>
+ 
+  <a href="#5">Humidity&emsp;</a>
+  <a href="#6">#####&emsp;</a> -->
+   </blockquote> </blockquote> </blockquote> </blockquote> </blockquote>  </blockquote> </blockquote> </blockquote> </blockquote>
+  </li>
+</ul>
+   
+</div>
+</div>
+<!-- HTML -->
+<div class="relative">
+<div id="image1"></div>
+  <!--<img class="1" src="bg.jpg" alt="water management" width="1900px" height="980px" >
+  <img class="1"  src="bg1.jpg" alt="water management" width="1900px" height="980px">
+  <img class="1"  src="bg2.jpg" alt="water management" width="1900px" height="980px">
+<img class="1"  src="bg4.jpg" alt="water management" width="1900px" height="980px"-->
+  <h1 class="absolute-text"> WATER </h1><h1 class="absolute1-text">MANAGEMENT </h1><h1 class="absolute2-text">SYSTEM</h1>
+  <!-- <center><h2 class ="absolute3-text">Temperature in Degrees Centigrade: {{ tem }}<br>Humidity value is: {{ hum }}<sup>o</sup></h2></center>-->
+</div>
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("1");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none"; 
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}   
+    x[myIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
+
+
+
